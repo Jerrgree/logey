@@ -1,0 +1,10 @@
+# Visual Studio & VSCode
+.vscode/
+.vs/
+Debug/
+*.vcxproj
+*.vcxproj.filters
+*.sln
+
+# Log file
+logey.log
