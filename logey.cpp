@@ -19,7 +19,10 @@ int main() {
 void keys(int key, char *filename) {
 
 	FILE *OUTPUT_FILE;
-	OUTPUT_FILE = fopen(filename, "a+");
+	errno_t err;
+	if (err = fopen_s(&OUTPUT_FILE, filename, "a+")) {
+		cout << "Cannot open file." << endl;
+	}
 
 	switch (key) {
 	case VK_RETURN:
