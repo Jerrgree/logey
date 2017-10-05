@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Windows.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -10,6 +11,6 @@ using namespace std;
 bool debug = false;
 
 
-void keys(int key, char *filename);
+void keys(int key, const char *filename);
 void hideConsole();
 char findLetter(int key);
