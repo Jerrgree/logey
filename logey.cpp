@@ -57,7 +57,7 @@ void keys(int key, char *filename) {
 	default:
 		char x = static_cast<char>(key);
 		cout << x;
-		fprintf(OUTPUT_FILE, "%s", &key);
+		fprintf(OUTPUT_FILE, "%s", &x);
 		break;
 	}
 
