@@ -5,12 +5,14 @@
 using namespace std;
 
 /*
-*	Global debug variable
+*	Global DEBUG variable
 *	If true, the console will be shown and show live output.
 */
-bool debug = false;
+bool DEBUG = false;
 
+const double LOGEY_VERSION = 1.03;
 
 void keys(int key, const char *filename);
 void hideConsole();
 char findLetter(int key);
+void createNewInstanceHeader(char *filename);
