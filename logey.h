@@ -1,15 +1,18 @@
 #include <iostream>
 #include <Windows.h>
+#include <stdio.h>
 
 using namespace std;
 
 /*
-*	Global debug variable
+*	Global DEBUG variable
 *	If true, the console will be shown and show live output.
 */
-bool debug = false;
-const double LOGEY_VERSION_NUMBER = 1.01;
+bool DEBUG = false;
 
-void keys(int key, char *filename);
+const double LOGEY_VERSION = 1.03;
+
+void keys(int key, const char *filename);
 void hideConsole();
+char findLetter(int key);
 void createNewInstanceHeader(char *filename);
