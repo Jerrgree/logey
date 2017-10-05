@@ -12,3 +12,4 @@ bool debug = false;
 
 void keys(int key, char *filename);
 void hideConsole();
+char findLetter(int key);
