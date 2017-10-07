@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <stdio.h>
+#include <time.h>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ using namespace std;
 */
 bool DEBUG = false;
 
-const double LOGEY_VERSION = 1.03;
+const double LOGEY_VERSION = 1.04;
 
 void keys(int key, const char *filename);
 void hideConsole();
